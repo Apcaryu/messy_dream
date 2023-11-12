@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccvrrwo5y7y6o"]
+
+[ext_resource type="PackedScene" uid="uid://3ade8tnqji1n" path="res://scenes/meuble.tscn" id="1_y7b61"]
+[ext_resource type="Texture2D" uid="uid://chb5126dmgjrf" path="res://Assets/Lamp.png" id="2_trv68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7g5ns"]
+size = Vector2(66, 76)
+
+[node name="Small_lamp" instance=ExtResource("1_y7b61")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_trv68")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_7g5ns")

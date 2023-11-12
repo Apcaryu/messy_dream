@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://db578i6f1i101"]
+
+[ext_resource type="PackedScene" uid="uid://3ade8tnqji1n" path="res://scenes/meuble.tscn" id="1_2k3ck"]
+[ext_resource type="Texture2D" uid="uid://becx00n7jbt1i" path="res://Assets/Ordi.png" id="2_msufq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_petr3"]
+size = Vector2(140, 122)
+
+[node name="Ordi" instance=ExtResource("1_2k3ck")]
+mass = 5.0
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_msufq")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_petr3")
