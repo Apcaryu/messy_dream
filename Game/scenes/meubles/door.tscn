@@ -14,3 +14,6 @@ texture = ExtResource("2_tr2ee")
 
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource("RectangleShape2D_wxmt3")
+
+[node name="CollisionPolygon2D" parent="." index="2"]
+polygon = PackedVector2Array(-66, -160, 66, -160, 66, 160, -66, 160)
