@@ -1,12 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://3ade8tnqji1n"]
+[gd_scene load_steps=2 format=3 uid="uid://3ade8tnqji1n"]
 
 [ext_resource type="Script" path="res://scenes/meuble.gd" id="1_7e1io"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bgqve"]
-load_path = "res://.godot/imported/elementStone011.png-71693079c1ad82b82586076f6778a3a2.ctex"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ae3nb"]
-size = Vector2(70, 70)
 
 [node name="Meuble" type="RigidBody2D"]
 input_pickable = true
@@ -17,10 +11,9 @@ script = ExtResource("1_7e1io")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
-texture = SubResource("CompressedTexture2D_bgqve")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_ae3nb")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

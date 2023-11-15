@@ -14,3 +14,6 @@ texture = ExtResource("2_msufq")
 
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource("RectangleShape2D_petr3")
+
+[node name="CollisionPolygon2D" parent="." index="2"]
+polygon = PackedVector2Array(-70, -61, 70, -61, 70, 28, 31.8978, 28, 32, 61, -32, 61, -31.9473, 28, -70, 28)
