@@ -42,31 +42,31 @@ rotation = -7.85398
 scale = Vector2(11.08, 1)
 
 [node name="Table_basse" parent="." instance=ExtResource("2_1s6et")]
-position = Vector2(132, 632)
+position = Vector2(132, 634)
 can_sleep = true
 
 [node name="Bureau" parent="." instance=ExtResource("3_doite")]
-position = Vector2(381, 616)
+position = Vector2(381, 620)
 can_sleep = true
 
 [node name="Mirror" parent="." instance=ExtResource("4_q5hj5")]
-position = Vector2(563, 543)
+position = Vector2(563, 546)
 can_sleep = true
 
 [node name="Pandrie" parent="." instance=ExtResource("5_maorc")]
-position = Vector2(750, 500)
+position = Vector2(750, 503)
 can_sleep = true
 
 [node name="Ordi" parent="." instance=ExtResource("6_2enw5")]
-position = Vector2(381, 494)
+position = Vector2(381, 500)
 can_sleep = true
 
 [node name="Small_lamp" parent="." instance=ExtResource("7_y0h77")]
-position = Vector2(131, 546)
+position = Vector2(131, 551)
 can_sleep = true
 
 [node name="Door" parent="." instance=ExtResource("9_ckcmm")]
-position = Vector2(1025, 518)
+position = Vector2(1025, 519)
 
 [node name="Gui" parent="." instance=ExtResource("11_sdef5")]
 

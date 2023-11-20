@@ -14,7 +14,7 @@ var processed_angular_velocity = Vector2()
 
 @export var health = 100
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	speed = linear_velocity.length() * .01
 	
 func _integrate_forces(state):
@@ -43,8 +43,9 @@ func _on_mouse_exited():
 	mouse_touch = false
 
 
-func _on_body_entered(body):
-	print("Touch!")
+func _on_body_entered(_body):
+	pass
+	#print("Touch!")
 	#damage(speed)
 
 func damage(force):
