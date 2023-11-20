@@ -2,9 +2,14 @@ extends Node
 
 @onready var gui = $Gui
 @onready var timer = $Timer
+var meubles = []
+var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var meubles = get_tree().get_nodes_in_group("meubles")
+	for i in meubles:
+		i.connect("touch", touch)
 	#print("Main scene is ready")
 	gui.connect("play", play)
 	timer.start()
@@ -16,10 +21,13 @@ func _process(_delta):
 func play():
 	pass
 
+func touch():
+	score += 1
 
 func _on_timer_timeout():
 	var gameover = $GameOver
 	gameover.show()
+	print("score = ", score)
 
 func _input(event):
 	if event.is_action_pressed("reload level"):
