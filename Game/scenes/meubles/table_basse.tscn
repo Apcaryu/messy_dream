@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dm8bgfip04eu5"]
+[gd_scene load_steps=3 format=3 uid="uid://dm8bgfip04eu5"]
 
 [ext_resource type="PackedScene" uid="uid://3ade8tnqji1n" path="res://scenes/meuble.tscn" id="1_b4lqb"]
 [ext_resource type="Texture2D" uid="uid://c5s5o5m6xohrr" path="res://Assets/Table+basse.png" id="2_krspk"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_teo88"]
-size = Vector2(92, 90)
 
 [node name="Table_basse" instance=ExtResource("1_b4lqb")]
 mass = 10.0
@@ -12,8 +9,5 @@ mass = 10.0
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_krspk")
 
-[node name="CollisionShape2D" parent="." index="1"]
-shape = SubResource("RectangleShape2D_teo88")
-
-[node name="CollisionPolygon2D" parent="." index="2"]
+[node name="CollisionPolygon2D" parent="." index="1"]
 polygon = PackedVector2Array(-46, -45, 46, -45, 46, 45, -46, 45)

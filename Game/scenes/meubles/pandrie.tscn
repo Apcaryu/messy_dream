@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgweqvvjrj6la"]
+[gd_scene load_steps=3 format=3 uid="uid://dgweqvvjrj6la"]
 
 [ext_resource type="PackedScene" uid="uid://3ade8tnqji1n" path="res://scenes/meuble.tscn" id="1_rckkf"]
 [ext_resource type="Texture2D" uid="uid://dafbgrsyhpq3g" path="res://Assets/Panderie.png" id="2_svlsn"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yy7mp"]
-size = Vector2(230, 352)
 
 [node name="Pandrie" instance=ExtResource("1_rckkf")]
 mass = 25.0
@@ -12,8 +9,5 @@ mass = 25.0
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_svlsn")
 
-[node name="CollisionShape2D" parent="." index="1"]
-shape = SubResource("RectangleShape2D_yy7mp")
-
-[node name="CollisionPolygon2D" parent="." index="2"]
+[node name="CollisionPolygon2D" parent="." index="1"]
 polygon = PackedVector2Array(-115, -176, 115, -176, 115, 176, -115, 176)
