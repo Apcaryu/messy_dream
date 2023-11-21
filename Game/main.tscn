@@ -41,37 +41,38 @@ position = Vector2(1183, 354)
 rotation = -7.85398
 scale = Vector2(11.08, 1)
 
-[node name="Table_basse" parent="." instance=ExtResource("2_1s6et")]
+[node name="Table_basse" parent="." groups=["meubles"] instance=ExtResource("2_1s6et")]
 position = Vector2(132, 634)
 can_sleep = true
 
-[node name="Bureau" parent="." instance=ExtResource("3_doite")]
+[node name="Bureau" parent="." groups=["meubles"] instance=ExtResource("3_doite")]
 position = Vector2(381, 620)
 can_sleep = true
 
-[node name="Mirror" parent="." instance=ExtResource("4_q5hj5")]
+[node name="Mirror" parent="." groups=["meubles"] instance=ExtResource("4_q5hj5")]
 position = Vector2(563, 546)
 can_sleep = true
 
-[node name="Pandrie" parent="." instance=ExtResource("5_maorc")]
+[node name="Pandrie" parent="." groups=["meubles"] instance=ExtResource("5_maorc")]
 position = Vector2(750, 503)
 can_sleep = true
 
-[node name="Ordi" parent="." instance=ExtResource("6_2enw5")]
+[node name="Ordi" parent="." groups=["meubles"] instance=ExtResource("6_2enw5")]
 position = Vector2(381, 500)
 can_sleep = true
 
-[node name="Small_lamp" parent="." instance=ExtResource("7_y0h77")]
+[node name="Small_lamp" parent="." groups=["meubles"] instance=ExtResource("7_y0h77")]
 position = Vector2(131, 551)
 can_sleep = true
 
-[node name="Door" parent="." instance=ExtResource("9_ckcmm")]
+[node name="Door" parent="." groups=["meubles"] instance=ExtResource("9_ckcmm")]
 position = Vector2(1025, 519)
 
 [node name="Gui" parent="." instance=ExtResource("11_sdef5")]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0
+one_shot = true
 
 [node name="GameOver" type="Sprite2D" parent="."]
 visible = false

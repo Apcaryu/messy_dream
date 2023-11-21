@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+signal touch
+
 enum {
 	IDLE_STATE,
 	GRAB_STATE
@@ -44,7 +46,7 @@ func _on_mouse_exited():
 
 
 func _on_body_entered(_body):
-	pass
+	touch.emit()
 	#print("Touch!")
 	#damage(speed)
 

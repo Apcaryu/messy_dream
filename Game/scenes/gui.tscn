@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://chd45ft26j8t0"]
+[gd_scene load_steps=4 format=3 uid="uid://chd45ft26j8t0"]
 
 [ext_resource type="Script" path="res://scenes/gui.gd" id="1_kj05b"]
 [ext_resource type="Texture2D" uid="uid://bbr6bfan7t6am" path="res://Assets/Title+screen.png" id="1_koawt"]
+[ext_resource type="FontFile" uid="uid://cgq7etdd4laql" path="res://Fonts/abdomentality/Abdomentality.ttf" id="3_weu1w"]
 
 [node name="Gui" type="CanvasLayer"]
 script = ExtResource("1_kj05b")
@@ -15,7 +16,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title screen" type="Sprite2D" parent="MarginContainer"]
+[node name="Titlescreen" type="Sprite2D" parent="MarginContainer"]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_koawt")
 
@@ -36,5 +37,20 @@ offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/NinePatchRect"]
+visible = false
+layout_mode = 2
+offset_left = -67.0
+offset_top = -18.0
+offset_right = 171.0
+offset_bottom = 145.0
+rotation = 0.166695
+theme_override_colors/font_color = Color(0.337255, 0.290196, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_weu1w")
+theme_override_font_sizes/font_size = 125
+text = "1200"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="MarginContainer/NinePatchRect/Button" to="." method="_on_button_button_down"]
