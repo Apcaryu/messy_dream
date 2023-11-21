@@ -19,14 +19,16 @@ func _process(_delta):
 	pass
 
 func play():
-	pass
+	score = 0
 
 func touch():
 	score += 1
 
 func _on_timer_timeout():
-	var gameover = $GameOver
-	gameover.show()
+	gui.update_score(score)
+	gui.gameover()
+	#var gameover = $GameOver
+	#gameover.show()
 	print("score = ", score)
 
 func _input(event):
