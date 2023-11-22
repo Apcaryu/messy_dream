@@ -12,7 +12,6 @@ func _ready():
 		i.connect("touch", touch)
 	#print("Main scene is ready")
 	gui.connect("play", play)
-	timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -20,6 +19,7 @@ func _process(_delta):
 
 func play():
 	score = 0
+	timer.start()
 
 func touch():
 	score += 1
