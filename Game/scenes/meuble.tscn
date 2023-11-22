@@ -3,9 +3,7 @@
 [ext_resource type="Script" path="res://scenes/meuble.gd" id="1_7e1io"]
 
 [node name="Meuble" type="RigidBody2D"]
-input_pickable = true
 max_contacts_reported = 1
-contact_monitor = true
 can_sleep = false
 script = ExtResource("1_7e1io")
 

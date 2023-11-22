@@ -2,24 +2,28 @@ extends Node
 
 @onready var gui = $Gui
 @onready var timer = $Timer
-var meubles = []
+var meubles
 var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var meubles = get_tree().get_nodes_in_group("meubles")
+	meubles = get_tree().get_nodes_in_group("meubles")
 	for i in meubles:
 		i.connect("touch", touch)
 	#print("Main scene is ready")
 	gui.connect("play", play)
-	timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
 
 func play():
+	meubles = get_tree().get_nodes_in_group("meubles")	
+	for i in meubles:
+		i.contact_monitor = true
+		i.input_pickable = true
 	score = 0
+	timer.start()
 
 func touch():
 	score += 1
