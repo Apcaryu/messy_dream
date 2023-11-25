@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://diqm42ye6x3at"]
+[gd_scene load_steps=14 format=3 uid="uid://diqm42ye6x3at"]
 
 [ext_resource type="Texture2D" uid="uid://btp5ymh15ugxf" path="res://Assets/Background.png" id="1_gbp8l"]
 [ext_resource type="PackedScene" uid="uid://qyfs6mgp57q8" path="res://scenes/wall.tscn" id="1_ib4v7"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cus0oy5w7k8ue" path="res://scenes/meubles/door.tscn" id="9_ckcmm"]
 [ext_resource type="PackedScene" uid="uid://chd45ft26j8t0" path="res://scenes/gui.tscn" id="11_sdef5"]
 [ext_resource type="Texture2D" uid="uid://b7of63wep1cma" path="res://Assets/Game+over.png" id="12_gapaq"]
+[ext_resource type="AudioStream" uid="uid://dbk6bew21k4f4" path="res://Sound/messy_dream.mp3" id="13_00x72"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ptt1g")
@@ -79,5 +80,9 @@ visible = false
 position = Vector2(600, 360)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("12_gapaq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_00x72")
+bus = &"Musique"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

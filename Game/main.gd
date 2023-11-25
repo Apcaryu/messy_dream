@@ -18,6 +18,7 @@ func _process(_delta):
 	pass
 
 func play():
+	$AudioStreamPlayer.play()
 	meubles = get_tree().get_nodes_in_group("meubles")	
 	for i in meubles:
 		i.contact_monitor = true

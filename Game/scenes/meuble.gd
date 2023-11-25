@@ -83,8 +83,8 @@ func _on_body_entered(_body):
 				select_sound = medium_sounds[randi_range(0, medium_sounds.size() - 1)]
 			HEAVY:
 				select_sound = heavy_sounds[randi_range(0, heavy_sounds.size() - 1)]
+		
 		var sfx = load(select_sound)
-		print("name: ", self.name, " | mass: ", self.mass, " | my_mass: ", my_mass, " | select: ", select_sound)
 		$AudioStreamPlayer.stream = sfx
 		$AudioStreamPlayer.play()
 	#print("Touch!")
