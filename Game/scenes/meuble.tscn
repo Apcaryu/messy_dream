@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://3ade8tnqji1n"]
+[gd_scene load_steps=3 format=3 uid="uid://3ade8tnqji1n"]
 
 [ext_resource type="Script" path="res://scenes/meuble.gd" id="1_7e1io"]
+[ext_resource type="AudioStream" uid="uid://ipbmriwg7tjv" path="res://Sound/FX/Moyen1.mp3" id="2_n0b8d"]
 
 [node name="Meuble" type="RigidBody2D"]
 max_contacts_reported = 1
@@ -12,6 +13,10 @@ scale = Vector2(0.25, 0.25)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_n0b8d")
+bus = &"Meubles"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
